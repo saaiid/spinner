@@ -1,8 +1,10 @@
-let animation = ["|", "/", "-", "\\"];
+const characters = ['|', '/', '-', '\\', '|', '/', '-', '\\', '|'];
+
 let delay = 100;
 
-for (let i = 0; i < animation.length; i++) {
+for (const char of characters) {
   setTimeout(() => {
-    process.stdout.write(`\r${animation[i]}   `);
-  }, delay * (i + 1));
+    process.stdout.write(`\r${char}   `);
+  }, delay);
+  delay += 200;
 }
